@@ -1,0 +1,27 @@
+server:
+  port: 8085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    hostname: localhost
+spring:
+  cloud:
+    gateway:
+
+      discovery:
+        locator:
+          enable: true
+      routes:
+        - id: ms-example-service
+          uri: lb://ms-example-service
+          predicates:
+            - Path=/example/**
+            - Path=/example/**
+        - id: ms-example2-service
+          uri: lb://ms-example2-service
+          predicates:
+            - Path=/example2/**
+            - Path=/example2/**
