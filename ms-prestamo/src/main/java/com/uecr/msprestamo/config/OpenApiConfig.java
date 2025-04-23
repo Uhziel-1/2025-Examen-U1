@@ -1,4 +1,4 @@
-package com.uecr.msusuario.config;
+package com.uecr.msprestamo.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -9,9 +9,9 @@ public class OpenApiConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI().info(new Info()
-                .title("OPEN API MICROSERVICIO USUARIO")
+                .title("OPEN API MICROSERVICIO STUDENT")
                 .version("0.0.1")
-                .description("servicios web usuario")
+                .description("servicios web student")
                 .termsOfService("http:// swagger.io/terms")
                 .license(new License().name("Apache 2.0").url("http://springdoc.org"))
         );
