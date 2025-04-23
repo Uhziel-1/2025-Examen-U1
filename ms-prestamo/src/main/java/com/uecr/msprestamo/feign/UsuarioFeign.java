@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "uecr-usuario-service", path = "/usuarios")
 public interface UsuarioFeign {
     @GetMapping("/{id}")
-    ResponseEntity<UsuarioDto> getLibro(@PathVariable Integer id);
+    ResponseEntity<UsuarioDto> getUsuario(@PathVariable Integer id);
 }
