@@ -19,14 +19,14 @@ public class PrestamoSeeder implements CommandLineRunner {
     @Override
     public void run(String... args) {
         if (prestamoRepository.count() == 0) {
-            Prestamo prestamo1 = new Prestamo(null, 1, 1, null, LocalDateTime.now().plusDays(15));
-            Prestamo prestamo2 = new Prestamo(null, 2, 2, null, LocalDateTime.now().plusDays(10));
-            Prestamo prestamo3 = new Prestamo(null, 3, 3, null, LocalDateTime.now().plusDays(7));
-            Prestamo prestamo4 = new Prestamo(null, 4, 4, null, LocalDateTime.now().plusDays(20));
-            Prestamo prestamo5 = new Prestamo(null, 5, 5, null, LocalDateTime.now().plusDays(14));
-            Prestamo prestamo6 = new Prestamo(null, 6, 6, null, LocalDateTime.now().plusDays(12));
-            Prestamo prestamo7 = new Prestamo(null, 7, 7, null, LocalDateTime.now().plusDays(9));
-            Prestamo prestamo8 = new Prestamo(null, 8, 8, null, LocalDateTime.now().plusDays(18));
+            Prestamo prestamo1 = new Prestamo(null, 1, null, 1, null, null, LocalDateTime.now().plusDays(15));
+            Prestamo prestamo2 = new Prestamo(null, 2, null, 2,null, null, LocalDateTime.now().plusDays(10));
+            Prestamo prestamo3 = new Prestamo(null, 3, null, 3, null, null, LocalDateTime.now().plusDays(7));
+            Prestamo prestamo4 = new Prestamo(null, 4, null, 4, null, null, LocalDateTime.now().plusDays(20));
+            Prestamo prestamo5 = new Prestamo(null, 5, null, 5, null, null, LocalDateTime.now().plusDays(14));
+            Prestamo prestamo6 = new Prestamo(null, 6, null, 6, null, null, LocalDateTime.now().plusDays(12));
+            Prestamo prestamo7 = new Prestamo(null, 7, null, 7, null, null, LocalDateTime.now().plusDays(9));
+            Prestamo prestamo8 = new Prestamo(null, 8, null, 8, null, null, LocalDateTime.now().plusDays(18));
 
             prestamoRepository.save(prestamo1);
             prestamoRepository.save(prestamo2);

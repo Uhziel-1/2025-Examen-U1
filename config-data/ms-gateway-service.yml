@@ -15,13 +15,15 @@ spring:
         locator:
           enable: true
       routes:
-        - id: ms-example-service
-          uri: lb://ms-example-service
+        - id: uecr-libro-service
+          uri: lb://uecr-libro-service
           predicates:
-            - Path=/example/**
-            - Path=/example/**
-        - id: ms-example2-service
-          uri: lb://ms-example2-service
+            - Path=/libros/**
+        - id: uecr-usuario-service
+          uri: lb://uecr-usuario-service
           predicates:
-            - Path=/example2/**
-            - Path=/example2/**
+            - Path=/usuarios/**
+        - id: uecr-prestamo-service
+          uri: lb://uecr-prestamo-service
+          predicates:
+            - Path=/prestamos/**

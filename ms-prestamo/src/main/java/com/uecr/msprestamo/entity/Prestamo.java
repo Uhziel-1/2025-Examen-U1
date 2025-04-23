@@ -1,5 +1,7 @@
 package com.uecr.msprestamo.entity;
 
+import com.uecr.msprestamo.dto.LibroDto;
+import com.uecr.msprestamo.dto.UsuarioDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
