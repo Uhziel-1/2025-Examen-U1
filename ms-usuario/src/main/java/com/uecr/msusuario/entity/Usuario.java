@@ -1,9 +1,9 @@
 package com.uecr.msusuario.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.uecr.msusuario.enumerate.EstadoUsuario;
+import com.uecr.msusuario.enumerate.TipoUsuario;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,7 +17,11 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
-    private String tipo;
-    private String estado;
+    @Email
+    private String email;
+    @Enumerated(EnumType.STRING)
+    private TipoUsuario tipo;
+    @Enumerated(EnumType.STRING)
+    private EstadoUsuario estado;
     private String carrera;
 }

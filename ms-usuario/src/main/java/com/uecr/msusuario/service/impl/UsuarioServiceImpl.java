@@ -31,7 +31,24 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario update(int id, Usuario usuario) {
-        return usuarioRepository.save(usuario);
+        Usuario existente = usuarioRepository.findById(id)
+                .orElseThrow( () -> new RuntimeException("Usuario no encontrado" + id));
+        if (usuario.getNombre() != null) {
+            existente.setNombre(usuario.getNombre());
+        }
+        if (usuario.getEmail() != null) {
+            existente.setEmail(usuario.getEmail());
+        }
+        if (usuario.getTipo() != null) {
+            existente.setTipo(usuario.getTipo());
+        }
+        if (usuario.getEstado() != null) {
+            existente.setEstado(usuario.getEstado());
+        }
+        if (usuario.getCarrera() != null) {
+            existente.setCarrera(usuario.getCarrera());
+        }
+        return usuarioRepository.save(existente);
     }
 
     @Override

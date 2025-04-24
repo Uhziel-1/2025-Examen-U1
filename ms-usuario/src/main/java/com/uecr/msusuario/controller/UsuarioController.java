@@ -32,7 +32,7 @@ public class UsuarioController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Usuario> update(@PathVariable Integer id, @RequestBody Usuario usuario) {
-        return ResponseEntity.ok().body(usuarioService.save(usuario));
+        return ResponseEntity.ok().body(usuarioService.update(id, usuario));
     }
 
     @DeleteMapping("/{id}")

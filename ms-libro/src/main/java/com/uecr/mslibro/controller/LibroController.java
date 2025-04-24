@@ -32,7 +32,7 @@ public class LibroController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Libro> update(@PathVariable Integer id, @RequestBody Libro libro) {
-        return ResponseEntity.ok().body(libroService.save(libro));
+        return ResponseEntity.ok().body(libroService.update(id, libro));
     }
 
     @DeleteMapping("/{id}")

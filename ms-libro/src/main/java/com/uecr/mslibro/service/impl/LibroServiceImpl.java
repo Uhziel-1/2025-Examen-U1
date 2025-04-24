@@ -31,6 +31,8 @@ public class LibroServiceImpl implements LibroService {
 
     @Override
     public Libro update(int id, Libro libro) {
+        Libro existente = libroRepository.findById(id)
+                .orElseThrow( () -> new RuntimeException("Libro no encontrado" + id));
         return libroRepository.save(libro);
     }
 

@@ -1,9 +1,6 @@
 package com.uecr.mslibro.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +16,7 @@ public class Libro {
     private String titulo;
     private String autor;
     private String editorial;
+    @Column(unique = true)
     private String isbn;
     private Integer copiasDisponibles;
     private String categoria;

@@ -32,7 +32,7 @@ public class PrestamoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Prestamo> update(@PathVariable Integer id, @RequestBody Prestamo prestamo) {
-        return ResponseEntity.ok().body(prestamoService.save(prestamo));
+        return ResponseEntity.ok().body(prestamoService.update(id, prestamo));
     }
 
     @DeleteMapping("/{id}")
