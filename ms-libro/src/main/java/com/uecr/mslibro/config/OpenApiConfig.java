@@ -9,9 +9,9 @@ public class OpenApiConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI().info(new Info()
-                .title("OPEN API MICROSERVICIO STUDENT")
+                .title("OPEN API MICROSERVICIO LIBRO")
                 .version("0.0.1")
-                .description("servicios web student")
+                .description("servicios web libro")
                 .termsOfService("http:// swagger.io/terms")
                 .license(new License().name("Apache 2.0").url("http://springdoc.org"))
         );
